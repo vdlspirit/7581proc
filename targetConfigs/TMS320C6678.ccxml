@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<configurations XML_version="1.2" id="configurations_0">
+    
+
+
+
+<configuration XML_version="1.2" id="Sauris SAU510-USB Iso Plus Emulator_0">
+        <instance XML_version="1.2" desc="Sauris SAU510-USB Iso Plus Emulator_0" href="connections/SAU510USBIsoPlus_Connection.xml" id="Sauris SAU510-USB Iso Plus Emulator_0" xml="SAU510USBIsoPlus_Connection.xml" xmlpath="connections"/>
+        <connection XML_version="1.2" id="Sauris SAU510-USB Iso Plus Emulator_0">
+            <instance XML_version="1.2" href="drivers/sau510icepick_d.xml" id="drivers" xml="sau510icepick_d.xml" xmlpath="drivers"/>
+            <instance XML_version="1.2" href="drivers/sau510c66xx.xml" id="drivers" xml="sau510c66xx.xml" xmlpath="drivers"/>
+            <instance XML_version="1.2" href="drivers/sau510cs_dap.xml" id="drivers" xml="sau510cs_dap.xml" xmlpath="drivers"/>
+            <instance XML_version="1.2" href="drivers/sau510csstm.xml" id="drivers" xml="sau510csstm.xml" xmlpath="drivers"/>
+            <instance XML_version="1.2" href="drivers/sau510etbcs_a.xml" id="drivers" xml="sau510etbcs_a.xml" xmlpath="drivers"/>
+            <platform XML_version="1.2" id="platform_0">
+                <instance XML_version="1.2" desc="TMS320C6678_0" href="devices/C6678.xml" id="TMS320C6678_0" xml="C6678.xml" xmlpath="devices"/>
+            <device HW_revision="1" XML_version="1.2" description="C66x core" id="TMS320C6678_0" partnum="TMS320C6678" simulation="no">
+                    <router HW_revision="1.0" XML_version="1.2" description="ICEPick_D Router" id="IcePick_D_0" isa="ICEPICK_D">
+                        <subpath id="subpath_0">
+                            <cpu HW_revision="1.0" XML_version="1.2" description="C66xx CPU" deviceSim="false" id="C66xx_0" isa="TMS320c66xx">
+                                <property Type="filepathfield" Value="..\..\..\Bibliotec6678\Gel\pancyr6678.gel" id="GEL File"/>
+                            </cpu>
+                        </subpath>
+                    </router>
+                </device>
+            </platform>
+        </connection>
+    </configuration>
+</configurations>
