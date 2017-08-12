@@ -8,9 +8,9 @@ Tool="CustomBuilder"
 Config="Executable"
 
 [Project Dependencies]
-Source="D:/PancyrCM/PlatformTest/P_6CA_Reliz1AddSinxBagVideo/Debug/configPkg/package/configPkg.pjt"
+Source="E:/PancyrCM/PlatformTest/P_6CA_Reliz1AddSinxBagVideo/Debug/configPkg/package/configPkg.pjt"
 
-["D:/PancyrCM/PlatformTest/P_6CA_Reliz1AddSinxBagVideo/Debug/configPkg/package/configPkg.pjt" Settings]
+["E:/PancyrCM/PlatformTest/P_6CA_Reliz1AddSinxBagVideo/Debug/configPkg/package/configPkg.pjt" Settings]
 ExcludeFromBuild=true
 
 
@@ -20,7 +20,7 @@ ExcludeFromBuild=true
 ;  directories.
 ;
 ["Compiler" Settings: "Executable"]
-Options=-i"C:/ti5.3/pdk_C6678_1_1_2_6/packages" -i"C:/ti5.3/ndk_2_21_02_43/packages" -i"C:/ti5.3/bios_6_34_02_18/packages" -i"C:/ti5.3/mcsdk_2_01_02_06/demos" -i"C:/ti5.3/ccsv5/ccs_base" -i"C:/ti5.3/ipc_1_25_00_04/packages" -i"C:/ti5.3/edma3_lld_02_11_05_02/packages" -i"C:/ti5.3/xdctools_3_24_05_48/packages" -i"D:\PancyrCM\PlatformTest\P_6CA_Reliz1AddSinxBagVideo\Debug" 
+Options=-i"C:/ti53/pdk_C6678_1_1_2_6/packages" -i"C:/ti53/ndk_2_21_02_43/packages" -i"C:/ti53/bios_6_34_02_18/packages" -i"C:/ti53/mcsdk_2_01_02_06/demos" -i"C:/ti53/ccsv5/ccs_base" -i"C:/ti53/ipc_1_25_00_04/packages" -i"C:/ti53/edma3_lld_02_11_05_02/packages" -i"C:/ti53/xdctools_3_24_05_48/packages" -i"E:\PancyrCM\PlatformTest\P_6CA_Reliz1AddSinxBagVideo\Debug" 
 
 [External Makefile]
 ExtMakefile=../../package.bld
@@ -32,11 +32,11 @@ ExtMakefile=../../package.bld
 [Source Files]
 Source="../../package.bld"
 Source="client_xe66.c"
-Source="../../D:/PancyrCM/PlatformTest/P_6CA_Reliz1AddSinxBagVideo/client.cfg"
+Source="../../E:/PancyrCM/PlatformTest/P_6CA_Reliz1AddSinxBagVideo/client.cfg"
 
 ["../../package.bld" Settings: "Executable"]
 UseCustomBuild=true
-CustomBuildCmd=C:\ti5.3\xdctools_3_24_05_48\xdc.exe client.xe66
+CustomBuildCmd=C:\ti53\xdctools_3_24_05_48\xdc.exe client.xe66
 
 ; if no custom "clean" command is specified, rebuild all deletes the
 ; following files before running the build command above.  
@@ -50,7 +50,7 @@ CustomBuildOutput="client.xe66"
 ;  Instead we only clean out those files associated with the target used to
 ;  build the executable.
 ;
-CustomCleanCmd=C:\ti5.3\xdctools_3_24_05_48\xdc.exe clean,e66
+CustomCleanCmd=C:\ti53\xdctools_3_24_05_48\xdc.exe clean,e66
 ;
 ;  Always run the xdc command since this command is the one that tracks
 ;  dependencies
@@ -66,5 +66,5 @@ Run=Always
 ["client_xe66.c" Settings: "Executable"]
 ExcludeFromBuild=true
 
-["../../D:/PancyrCM/PlatformTest/P_6CA_Reliz1AddSinxBagVideo/client.cfg" Settings: "Executable"]
+["../../E:/PancyrCM/PlatformTest/P_6CA_Reliz1AddSinxBagVideo/client.cfg" Settings: "Executable"]
 ExcludeFromBuild=true

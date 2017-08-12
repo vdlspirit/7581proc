@@ -145,6 +145,8 @@ uint32 FillDataFrame1(DataFileFrame *dataframe,uint16 Frame,uint16 Param,uint16 
 		volatile uint32* addr=(uint32*)(ADDRRAMJOBFLASHPROGRAMM+16+(Frame-1)*4);
 		volatile uint32 SizeByteCh1=0;
 		volatile uint32 SizeByteCh2=0;
+		volatile uint32 AllSizeCadrCh1=0;
+		volatile uint32 AllSizeCadrCh2=0;
 		volatile uint32 offset=0;
 		//uint16 XorFrame=0;
 
@@ -170,7 +172,8 @@ uint32 FillDataFrame1(DataFileFrame *dataframe,uint16 Frame,uint16 Param,uint16 
 				dataframe->MarkerStart=MarkerStartFrame;
 
 				dataframe->OffsetNextFrame=*addr+sizeof(DataFileFrame)+512+sizeof(OEDTOTA)
-						+sizeof(TATOOED)+SizeByteCh1+SizeByteCh2+6;
+						+sizeof(TATOOED)+SizeByteCh1+SizeByteCh2 + (SIZE_DOP_KADR_CH1*SIZE_DOP_KADR_CH1*4)+(SIZE_DOP_KADR_CH2*SIZE_DOP_KADR_CH2*4)+6;
+				//не делим на 2 потому что по два кадра
 
 				if(dataframe->OffsetNextFrame>=MaxSizePuskInByte)	//чуть меньше 240 мегабайт
 					return 0xffffffff;
@@ -186,7 +189,8 @@ uint32 FillDataFrame1(DataFileFrame *dataframe,uint16 Frame,uint16 Param,uint16 
 				dataframe->CoordY1=battle.Target1CoordY1;
 				dataframe->CoordX2=battle.Target1CoordX2;
 				dataframe->CoordY2=battle.Target1CoordY2;
-				dataframe->Reserv1=0;
+				dataframe->SizeDopKadrCh1=SIZE_DOP_KADR_CH1;
+				dataframe->SizeDopKadrCh2=SIZE_DOP_KADR_CH2;
 
 				if(ta1.CommandTA1.s.ResetK1!=1)
 				{
@@ -221,37 +225,39 @@ uint32 FillDataFrame1(DataFileFrame *dataframe,uint16 Frame,uint16 Param,uint16 
 				SizeByteCh1/=2;
 				SizeByteCh2/=2;
 
+				AllSizeCadrCh1=SizeByteCh1+(SIZE_DOP_KADR_CH1*SIZE_DOP_KADR_CH1*2);
+				AllSizeCadrCh2=SizeByteCh2+(SIZE_DOP_KADR_CH2*SIZE_DOP_KADR_CH2*2);
 				//канал 1
 				if(battle.ControlState.s.SumChan1T1==1)
 				{
-					memcpy((void*)(addrframe+offset),(void *)(isInitialized[68]),SizeByteCh1);
-					offset+=SizeByteCh1;
-					memcpy((void*)(addrframe+offset),(void *)(isInitialized[70]),SizeByteCh1);
-					offset+=SizeByteCh1;
+					memcpy((void*)(addrframe+offset),(void *)(isInitialized[68]),AllSizeCadrCh1);
+					offset+=AllSizeCadrCh1;
+					memcpy((void*)(addrframe+offset),(void *)(isInitialized[70]),AllSizeCadrCh1);
+					offset+=AllSizeCadrCh1;
 				}
 				else
 				{
-					memcpy((void*)(addrframe+offset),(void *)(isInitialized[78]),SizeByteCh1);
-					offset+=SizeByteCh1;
-					memcpy((void*)(addrframe+offset),(void *)(isInitialized[80]),SizeByteCh1);
-					offset+=SizeByteCh1;
+					memcpy((void*)(addrframe+offset),(void *)(isInitialized[78]),AllSizeCadrCh1);
+					offset+=AllSizeCadrCh1;
+					memcpy((void*)(addrframe+offset),(void *)(isInitialized[80]),AllSizeCadrCh1);
+					offset+=AllSizeCadrCh1;
 				}
 
 				//канал 2
 
 				if(battle.ControlState.s.SumChan2T1==1)
 				{
-					memcpy((void*)(addrframe+offset),(void *)(isInitialized[72]),SizeByteCh2);
-					offset+=SizeByteCh2;
-					memcpy((void*)(addrframe+offset),(void *)(isInitialized[74]),SizeByteCh2);
-					offset+=SizeByteCh2;
+					memcpy((void*)(addrframe+offset),(void *)(isInitialized[72]),AllSizeCadrCh2);
+					offset+=AllSizeCadrCh2;
+					memcpy((void*)(addrframe+offset),(void *)(isInitialized[74]),AllSizeCadrCh2);
+					offset+=AllSizeCadrCh2;
 				}
 				else
 				{
-					memcpy((void*)(addrframe+offset),(void *)(isInitialized[82]),SizeByteCh2);
-					offset+=SizeByteCh2;
-					memcpy((void*)(addrframe+offset),(void *)(isInitialized[84]),SizeByteCh2);
-					offset+=SizeByteCh2;
+					memcpy((void*)(addrframe+offset),(void *)(isInitialized[82]),AllSizeCadrCh2);
+					offset+=AllSizeCadrCh2;
+					memcpy((void*)(addrframe+offset),(void *)(isInitialized[84]),AllSizeCadrCh2);
+					offset+=AllSizeCadrCh2;
 				}
 
 				uint32 marker=(uint32)MarkerStopFrame;
@@ -277,6 +283,8 @@ uint32 FillDataFrame1(DataFileFrame *dataframe,uint16 Frame,uint16 Param,uint16 
 		volatile uint32* addr=(uint32*)(ADDRRAMJOBFLASHPROGRAMMT2+16+(Frame-1)*4);
 		volatile uint32 SizeByteCh1=0;
 		volatile uint32 SizeByteCh2=0;
+		volatile uint32 AllSizeCadrCh1=0;
+		volatile uint32 AllSizeCadrCh2=0;
 		volatile uint32 offset=0;
 		//uint16 XorFrame=0;
 
@@ -302,7 +310,7 @@ uint32 FillDataFrame1(DataFileFrame *dataframe,uint16 Frame,uint16 Param,uint16 
 				dataframe->MarkerStart=MarkerStartFrame;
 
 				dataframe->OffsetNextFrame=*addr+sizeof(DataFileFrame)+512+sizeof(OEDTOTA)
-						+sizeof(TATOOED)+SizeByteCh1+SizeByteCh2+6;
+						+sizeof(TATOOED)+SizeByteCh1+SizeByteCh2 + (SIZE_DOP_KADR_CH1*SIZE_DOP_KADR_CH1*4)+(SIZE_DOP_KADR_CH2*SIZE_DOP_KADR_CH2*4)+6;
 
 				if(dataframe->OffsetNextFrame>=MaxSizePuskInByte)	//чуть меньше 240 мегабайт
 					return 0xffffffff;
@@ -318,7 +326,8 @@ uint32 FillDataFrame1(DataFileFrame *dataframe,uint16 Frame,uint16 Param,uint16 
 				dataframe->CoordY1=battle2.Target2CoordY1;
 				dataframe->CoordX2=battle2.Target2CoordX2;
 				dataframe->CoordY2=battle2.Target2CoordY2;
-				dataframe->Reserv1=0;
+				dataframe->SizeDopKadrCh1=SIZE_DOP_KADR_CH1;
+				dataframe->SizeDopKadrCh2=SIZE_DOP_KADR_CH2;
 
 				if(ta2.CommandTA1.s.ResetK1!=1)
 				{
@@ -353,37 +362,40 @@ uint32 FillDataFrame1(DataFileFrame *dataframe,uint16 Frame,uint16 Param,uint16 
 				SizeByteCh1/=2;
 				SizeByteCh2/=2;
 
+				AllSizeCadrCh1=SizeByteCh1+(SIZE_DOP_KADR_CH1*SIZE_DOP_KADR_CH1*2);
+			    AllSizeCadrCh2=SizeByteCh2+(SIZE_DOP_KADR_CH2*SIZE_DOP_KADR_CH2*2);
+
 				//канал 1
 				if(battle2.ControlState2.s.SumChan1T2==1)
 				{
-					memcpy((void*)(addrframe+offset),(void *)(isInitialized[69]),SizeByteCh1);
-					offset+=SizeByteCh1;
-					memcpy((void*)(addrframe+offset),(void *)(isInitialized[71]),SizeByteCh1);
-					offset+=SizeByteCh1;
+					memcpy((void*)(addrframe+offset),(void *)(isInitialized[69]),AllSizeCadrCh1);
+					offset+=AllSizeCadrCh1;
+					memcpy((void*)(addrframe+offset),(void *)(isInitialized[71]),AllSizeCadrCh1);
+					offset+=AllSizeCadrCh1;
 				}
 				else
 				{
-					memcpy((void*)(addrframe+offset),(void *)(isInitialized[79]),SizeByteCh1);
-					offset+=SizeByteCh1;
-					memcpy((void*)(addrframe+offset),(void *)(isInitialized[81]),SizeByteCh1);
-					offset+=SizeByteCh1;
+					memcpy((void*)(addrframe+offset),(void *)(isInitialized[79]),AllSizeCadrCh1);
+					offset+=AllSizeCadrCh1;
+					memcpy((void*)(addrframe+offset),(void *)(isInitialized[81]),AllSizeCadrCh1);
+					offset+=AllSizeCadrCh1;
 				}
 
 				//канал 2
 
 				if(battle2.ControlState2.s.SumChan2T2==1)
 				{
-					memcpy((void*)(addrframe+offset),(void *)(isInitialized[73]),SizeByteCh2);
-					offset+=SizeByteCh2;
-					memcpy((void*)(addrframe+offset),(void *)(isInitialized[75]),SizeByteCh2);
-					offset+=SizeByteCh2;
+					memcpy((void*)(addrframe+offset),(void *)(isInitialized[73]),AllSizeCadrCh2);
+					offset+=AllSizeCadrCh2;
+					memcpy((void*)(addrframe+offset),(void *)(isInitialized[75]),AllSizeCadrCh2);
+					offset+=AllSizeCadrCh2;
 				}
 				else
 				{
-					memcpy((void*)(addrframe+offset),(void *)(isInitialized[83]),SizeByteCh2);
-					offset+=SizeByteCh2;
-					memcpy((void*)(addrframe+offset),(void *)(isInitialized[85]),SizeByteCh2);
-					offset+=SizeByteCh2;
+					memcpy((void*)(addrframe+offset),(void *)(isInitialized[83]),AllSizeCadrCh2);
+					offset+=AllSizeCadrCh2;
+					memcpy((void*)(addrframe+offset),(void *)(isInitialized[85]),AllSizeCadrCh2);
+					offset+=AllSizeCadrCh2;
 				}
 
 				uint32 marker=(uint32)MarkerStopFrame;

@@ -15,88 +15,88 @@ XDCCFGDIR = package/cfg/
 # in the event that some included BOM script changes.
 #
 ifneq (clean,$(MAKECMDGOALS))
-C:/ti5.3/xdctools_3_24_05_48/include/utils.tci:
-package.mak: C:/ti5.3/xdctools_3_24_05_48/include/utils.tci
-C:/ti5.3/xdctools_3_24_05_48/packages/xdc/xdc.tci:
-package.mak: C:/ti5.3/xdctools_3_24_05_48/packages/xdc/xdc.tci
-C:/ti5.3/xdctools_3_24_05_48/packages/xdc/template.xs:
-package.mak: C:/ti5.3/xdctools_3_24_05_48/packages/xdc/template.xs
-C:/ti5.3/xdctools_3_24_05_48/packages/xdc/om2.xs:
-package.mak: C:/ti5.3/xdctools_3_24_05_48/packages/xdc/om2.xs
-C:/ti5.3/xdctools_3_24_05_48/packages/xdc/xmlgen.xs:
-package.mak: C:/ti5.3/xdctools_3_24_05_48/packages/xdc/xmlgen.xs
-C:/ti5.3/xdctools_3_24_05_48/packages/xdc/xmlgen2.xs:
-package.mak: C:/ti5.3/xdctools_3_24_05_48/packages/xdc/xmlgen2.xs
-C:/ti5.3/xdctools_3_24_05_48/packages/xdc/IPackage.xs:
-package.mak: C:/ti5.3/xdctools_3_24_05_48/packages/xdc/IPackage.xs
-C:/ti5.3/xdctools_3_24_05_48/packages/xdc/package.xs:
-package.mak: C:/ti5.3/xdctools_3_24_05_48/packages/xdc/package.xs
-C:/ti5.3/xdctools_3_24_05_48/packages/xdc/services/global/Clock.xs:
-package.mak: C:/ti5.3/xdctools_3_24_05_48/packages/xdc/services/global/Clock.xs
-C:/ti5.3/xdctools_3_24_05_48/packages/xdc/services/global/Trace.xs:
-package.mak: C:/ti5.3/xdctools_3_24_05_48/packages/xdc/services/global/Trace.xs
-C:/ti5.3/xdctools_3_24_05_48/packages/xdc/bld/bld.js:
-package.mak: C:/ti5.3/xdctools_3_24_05_48/packages/xdc/bld/bld.js
-C:/ti5.3/xdctools_3_24_05_48/packages/xdc/bld/BuildEnvironment.xs:
-package.mak: C:/ti5.3/xdctools_3_24_05_48/packages/xdc/bld/BuildEnvironment.xs
-C:/ti5.3/xdctools_3_24_05_48/packages/xdc/bld/PackageContents.xs:
-package.mak: C:/ti5.3/xdctools_3_24_05_48/packages/xdc/bld/PackageContents.xs
-C:/ti5.3/xdctools_3_24_05_48/packages/xdc/bld/_gen.xs:
-package.mak: C:/ti5.3/xdctools_3_24_05_48/packages/xdc/bld/_gen.xs
-C:/ti5.3/xdctools_3_24_05_48/packages/xdc/bld/Library.xs:
-package.mak: C:/ti5.3/xdctools_3_24_05_48/packages/xdc/bld/Library.xs
-C:/ti5.3/xdctools_3_24_05_48/packages/xdc/bld/Executable.xs:
-package.mak: C:/ti5.3/xdctools_3_24_05_48/packages/xdc/bld/Executable.xs
-C:/ti5.3/xdctools_3_24_05_48/packages/xdc/bld/Repository.xs:
-package.mak: C:/ti5.3/xdctools_3_24_05_48/packages/xdc/bld/Repository.xs
-C:/ti5.3/xdctools_3_24_05_48/packages/xdc/bld/Configuration.xs:
-package.mak: C:/ti5.3/xdctools_3_24_05_48/packages/xdc/bld/Configuration.xs
-C:/ti5.3/xdctools_3_24_05_48/packages/xdc/bld/Script.xs:
-package.mak: C:/ti5.3/xdctools_3_24_05_48/packages/xdc/bld/Script.xs
-C:/ti5.3/xdctools_3_24_05_48/packages/xdc/bld/Manifest.xs:
-package.mak: C:/ti5.3/xdctools_3_24_05_48/packages/xdc/bld/Manifest.xs
-C:/ti5.3/xdctools_3_24_05_48/packages/xdc/bld/Utils.xs:
-package.mak: C:/ti5.3/xdctools_3_24_05_48/packages/xdc/bld/Utils.xs
-C:/ti5.3/xdctools_3_24_05_48/packages/xdc/bld/ITarget.xs:
-package.mak: C:/ti5.3/xdctools_3_24_05_48/packages/xdc/bld/ITarget.xs
-C:/ti5.3/xdctools_3_24_05_48/packages/xdc/bld/ITarget2.xs:
-package.mak: C:/ti5.3/xdctools_3_24_05_48/packages/xdc/bld/ITarget2.xs
-C:/ti5.3/xdctools_3_24_05_48/packages/xdc/bld/ITargetFilter.xs:
-package.mak: C:/ti5.3/xdctools_3_24_05_48/packages/xdc/bld/ITargetFilter.xs
-C:/ti5.3/xdctools_3_24_05_48/packages/xdc/bld/package.xs:
-package.mak: C:/ti5.3/xdctools_3_24_05_48/packages/xdc/bld/package.xs
+C:/ti53/xdctools_3_24_05_48/include/utils.tci:
+package.mak: C:/ti53/xdctools_3_24_05_48/include/utils.tci
+C:/ti53/xdctools_3_24_05_48/packages/xdc/xdc.tci:
+package.mak: C:/ti53/xdctools_3_24_05_48/packages/xdc/xdc.tci
+C:/ti53/xdctools_3_24_05_48/packages/xdc/template.xs:
+package.mak: C:/ti53/xdctools_3_24_05_48/packages/xdc/template.xs
+C:/ti53/xdctools_3_24_05_48/packages/xdc/om2.xs:
+package.mak: C:/ti53/xdctools_3_24_05_48/packages/xdc/om2.xs
+C:/ti53/xdctools_3_24_05_48/packages/xdc/xmlgen.xs:
+package.mak: C:/ti53/xdctools_3_24_05_48/packages/xdc/xmlgen.xs
+C:/ti53/xdctools_3_24_05_48/packages/xdc/xmlgen2.xs:
+package.mak: C:/ti53/xdctools_3_24_05_48/packages/xdc/xmlgen2.xs
+C:/ti53/xdctools_3_24_05_48/packages/xdc/IPackage.xs:
+package.mak: C:/ti53/xdctools_3_24_05_48/packages/xdc/IPackage.xs
+C:/ti53/xdctools_3_24_05_48/packages/xdc/package.xs:
+package.mak: C:/ti53/xdctools_3_24_05_48/packages/xdc/package.xs
+C:/ti53/xdctools_3_24_05_48/packages/xdc/services/global/Clock.xs:
+package.mak: C:/ti53/xdctools_3_24_05_48/packages/xdc/services/global/Clock.xs
+C:/ti53/xdctools_3_24_05_48/packages/xdc/services/global/Trace.xs:
+package.mak: C:/ti53/xdctools_3_24_05_48/packages/xdc/services/global/Trace.xs
+C:/ti53/xdctools_3_24_05_48/packages/xdc/bld/bld.js:
+package.mak: C:/ti53/xdctools_3_24_05_48/packages/xdc/bld/bld.js
+C:/ti53/xdctools_3_24_05_48/packages/xdc/bld/BuildEnvironment.xs:
+package.mak: C:/ti53/xdctools_3_24_05_48/packages/xdc/bld/BuildEnvironment.xs
+C:/ti53/xdctools_3_24_05_48/packages/xdc/bld/PackageContents.xs:
+package.mak: C:/ti53/xdctools_3_24_05_48/packages/xdc/bld/PackageContents.xs
+C:/ti53/xdctools_3_24_05_48/packages/xdc/bld/_gen.xs:
+package.mak: C:/ti53/xdctools_3_24_05_48/packages/xdc/bld/_gen.xs
+C:/ti53/xdctools_3_24_05_48/packages/xdc/bld/Library.xs:
+package.mak: C:/ti53/xdctools_3_24_05_48/packages/xdc/bld/Library.xs
+C:/ti53/xdctools_3_24_05_48/packages/xdc/bld/Executable.xs:
+package.mak: C:/ti53/xdctools_3_24_05_48/packages/xdc/bld/Executable.xs
+C:/ti53/xdctools_3_24_05_48/packages/xdc/bld/Repository.xs:
+package.mak: C:/ti53/xdctools_3_24_05_48/packages/xdc/bld/Repository.xs
+C:/ti53/xdctools_3_24_05_48/packages/xdc/bld/Configuration.xs:
+package.mak: C:/ti53/xdctools_3_24_05_48/packages/xdc/bld/Configuration.xs
+C:/ti53/xdctools_3_24_05_48/packages/xdc/bld/Script.xs:
+package.mak: C:/ti53/xdctools_3_24_05_48/packages/xdc/bld/Script.xs
+C:/ti53/xdctools_3_24_05_48/packages/xdc/bld/Manifest.xs:
+package.mak: C:/ti53/xdctools_3_24_05_48/packages/xdc/bld/Manifest.xs
+C:/ti53/xdctools_3_24_05_48/packages/xdc/bld/Utils.xs:
+package.mak: C:/ti53/xdctools_3_24_05_48/packages/xdc/bld/Utils.xs
+C:/ti53/xdctools_3_24_05_48/packages/xdc/bld/ITarget.xs:
+package.mak: C:/ti53/xdctools_3_24_05_48/packages/xdc/bld/ITarget.xs
+C:/ti53/xdctools_3_24_05_48/packages/xdc/bld/ITarget2.xs:
+package.mak: C:/ti53/xdctools_3_24_05_48/packages/xdc/bld/ITarget2.xs
+C:/ti53/xdctools_3_24_05_48/packages/xdc/bld/ITargetFilter.xs:
+package.mak: C:/ti53/xdctools_3_24_05_48/packages/xdc/bld/ITargetFilter.xs
+C:/ti53/xdctools_3_24_05_48/packages/xdc/bld/package.xs:
+package.mak: C:/ti53/xdctools_3_24_05_48/packages/xdc/bld/package.xs
 package.mak: config.bld
-C:/ti5.3/xdctools_3_24_05_48/packages/ti/targets/ITarget.xs:
-package.mak: C:/ti5.3/xdctools_3_24_05_48/packages/ti/targets/ITarget.xs
-C:/ti5.3/xdctools_3_24_05_48/packages/ti/targets/C28_large.xs:
-package.mak: C:/ti5.3/xdctools_3_24_05_48/packages/ti/targets/C28_large.xs
-C:/ti5.3/xdctools_3_24_05_48/packages/ti/targets/C28_float.xs:
-package.mak: C:/ti5.3/xdctools_3_24_05_48/packages/ti/targets/C28_float.xs
-C:/ti5.3/xdctools_3_24_05_48/packages/ti/targets/package.xs:
-package.mak: C:/ti5.3/xdctools_3_24_05_48/packages/ti/targets/package.xs
-C:/ti5.3/xdctools_3_24_05_48/packages/ti/targets/elf/ITarget.xs:
-package.mak: C:/ti5.3/xdctools_3_24_05_48/packages/ti/targets/elf/ITarget.xs
-C:/ti5.3/xdctools_3_24_05_48/packages/ti/targets/elf/TMS470.xs:
-package.mak: C:/ti5.3/xdctools_3_24_05_48/packages/ti/targets/elf/TMS470.xs
-C:/ti5.3/xdctools_3_24_05_48/packages/ti/targets/elf/package.xs:
-package.mak: C:/ti5.3/xdctools_3_24_05_48/packages/ti/targets/elf/package.xs
+C:/ti53/xdctools_3_24_05_48/packages/ti/targets/ITarget.xs:
+package.mak: C:/ti53/xdctools_3_24_05_48/packages/ti/targets/ITarget.xs
+C:/ti53/xdctools_3_24_05_48/packages/ti/targets/C28_large.xs:
+package.mak: C:/ti53/xdctools_3_24_05_48/packages/ti/targets/C28_large.xs
+C:/ti53/xdctools_3_24_05_48/packages/ti/targets/C28_float.xs:
+package.mak: C:/ti53/xdctools_3_24_05_48/packages/ti/targets/C28_float.xs
+C:/ti53/xdctools_3_24_05_48/packages/ti/targets/package.xs:
+package.mak: C:/ti53/xdctools_3_24_05_48/packages/ti/targets/package.xs
+C:/ti53/xdctools_3_24_05_48/packages/ti/targets/elf/ITarget.xs:
+package.mak: C:/ti53/xdctools_3_24_05_48/packages/ti/targets/elf/ITarget.xs
+C:/ti53/xdctools_3_24_05_48/packages/ti/targets/elf/TMS470.xs:
+package.mak: C:/ti53/xdctools_3_24_05_48/packages/ti/targets/elf/TMS470.xs
+C:/ti53/xdctools_3_24_05_48/packages/ti/targets/elf/package.xs:
+package.mak: C:/ti53/xdctools_3_24_05_48/packages/ti/targets/elf/package.xs
 package.mak: package.bld
-C:/ti5.3/xdctools_3_24_05_48/packages/xdc/tools/configuro/template/compiler.opt.xdt:
-package.mak: C:/ti5.3/xdctools_3_24_05_48/packages/xdc/tools/configuro/template/compiler.opt.xdt
-C:/ti5.3/xdctools_3_24_05_48/packages/xdc/services/io/File.xs:
-package.mak: C:/ti5.3/xdctools_3_24_05_48/packages/xdc/services/io/File.xs
-C:/ti5.3/xdctools_3_24_05_48/packages/xdc/services/io/package.xs:
-package.mak: C:/ti5.3/xdctools_3_24_05_48/packages/xdc/services/io/package.xs
-C:/ti5.3/xdctools_3_24_05_48/packages/xdc/tools/configuro/template/compiler.defs.xdt:
-package.mak: C:/ti5.3/xdctools_3_24_05_48/packages/xdc/tools/configuro/template/compiler.defs.xdt
-C:/ti5.3/xdctools_3_24_05_48/packages/xdc/tools/configuro/template/custom.mak.exe.xdt:
-package.mak: C:/ti5.3/xdctools_3_24_05_48/packages/xdc/tools/configuro/template/custom.mak.exe.xdt
-C:/ti5.3/xdctools_3_24_05_48/packages/xdc/tools/configuro/template/package.xs.xdt:
-package.mak: C:/ti5.3/xdctools_3_24_05_48/packages/xdc/tools/configuro/template/package.xs.xdt
+C:/ti53/xdctools_3_24_05_48/packages/xdc/tools/configuro/template/compiler.opt.xdt:
+package.mak: C:/ti53/xdctools_3_24_05_48/packages/xdc/tools/configuro/template/compiler.opt.xdt
+C:/ti53/xdctools_3_24_05_48/packages/xdc/services/io/File.xs:
+package.mak: C:/ti53/xdctools_3_24_05_48/packages/xdc/services/io/File.xs
+C:/ti53/xdctools_3_24_05_48/packages/xdc/services/io/package.xs:
+package.mak: C:/ti53/xdctools_3_24_05_48/packages/xdc/services/io/package.xs
+C:/ti53/xdctools_3_24_05_48/packages/xdc/tools/configuro/template/compiler.defs.xdt:
+package.mak: C:/ti53/xdctools_3_24_05_48/packages/xdc/tools/configuro/template/compiler.defs.xdt
+C:/ti53/xdctools_3_24_05_48/packages/xdc/tools/configuro/template/custom.mak.exe.xdt:
+package.mak: C:/ti53/xdctools_3_24_05_48/packages/xdc/tools/configuro/template/custom.mak.exe.xdt
+C:/ti53/xdctools_3_24_05_48/packages/xdc/tools/configuro/template/package.xs.xdt:
+package.mak: C:/ti53/xdctools_3_24_05_48/packages/xdc/tools/configuro/template/package.xs.xdt
 endif
 
-ti.targets.elf.C66.rootDir ?= C:/ti5.3/ccsv5/tools/compiler/c6000_7.4.1
-ti.targets.elf.packageBase ?= C:/ti5.3/xdctools_3_24_05_48/packages/ti/targets/elf/
+ti.targets.elf.C66.rootDir ?= C:/ti53/ccsv5/tools/compiler/c6000_7.4.1
+ti.targets.elf.packageBase ?= C:/ti53/xdctools_3_24_05_48/packages/ti/targets/elf/
 .PRECIOUS: $(XDCCFGDIR)/%.oe66
 .PHONY: all,e66 .dlls,e66 .executables,e66 test,e66
 all,e66: .executables,e66

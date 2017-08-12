@@ -4,7 +4,7 @@
 
 SHELL = cmd.exe
 
-CG_TOOL_ROOT := C:/ti5.3/ccsv5/tools/compiler/c6000_7.4.1
+CG_TOOL_ROOT := C:/ti53/ccsv5/tools/compiler/c6000_7.4.1
 
 ORDERED_OBJS += \
 $(GEN_CMDS__FLAG) \
@@ -144,7 +144,7 @@ all: P_6CA_Reliz1AddSinxBagVideo.out
 P_6CA_Reliz1AddSinxBagVideo.out: $(OBJS) $(GEN_CMDS)
 	@echo 'Building target: $@'
 	@echo 'Invoking: C6000 Linker'
-	"C:/ti5.3/ccsv5/tools/compiler/c6000_7.4.1/bin/cl6x" -mv6600 --abi=eabi -g --display_error_number --diag_warning=225 -z -m"P_6CA_Reliz1AddSinxBagVideo.map" -i"C:/ti5.3/ccsv5/tools/compiler/c6000_7.4.1/lib" -i"C:/ti5.3/ccsv5/tools/compiler/c6000_7.4.1/include" --reread_libs --warn_sections --rom_model -o "P_6CA_Reliz1AddSinxBagVideo.out" $(ORDERED_OBJS)
+	"C:/ti53/ccsv5/tools/compiler/c6000_7.4.1/bin/cl6x" -mv6600 --abi=eabi -g --display_error_number --diag_warning=225 -z -m"P_6CA_Reliz1AddSinxBagVideo.map" -i"C:/ti53/ccsv5/tools/compiler/c6000_7.4.1/lib" -i"C:/ti53/ccsv5/tools/compiler/c6000_7.4.1/include" --reread_libs --warn_sections --rom_model -o "P_6CA_Reliz1AddSinxBagVideo.out" $(ORDERED_OBJS)
 	@echo 'Finished building target: $@'
 	@echo ' '
 

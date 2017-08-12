@@ -13,6 +13,9 @@
 #define MarkerStartFrame	0xE4AABB4E
 #define MarkerStopFrame		0xA5CCDD5A
 
+#define SIZE_DOP_KADR_CH1	64	//размер дополнительного кадра в пикселях
+#define SIZE_DOP_KADR_CH2	64	//размер дополнительного кадра в пикселях
+
 typedef struct FlashDataFramStruct	//структура сохраненных пакетов во fram памяти
 {
 	uint32 	MarkerStart;
@@ -144,7 +147,8 @@ typedef struct DataFileFrame
 	uint16 CoordY1;							//координата поля анализа канала 1 по fi
 	uint16 CoordX2;							//координата поля анализа канала 2 по q
 	uint16 CoordY2;							//координата поля анализа канала 2 по fi
-	uint16 Reserv1;
+	uint8  SizeDopKadrCh1;					//размер дополнительнон симметричного кадра в канале 1
+	uint8  SizeDopKadrCh2;					//размер дополнительнон симметричного кадра в канале 2
 
 	union KadrCh1	//параметры кадра в канале 1
 	{
